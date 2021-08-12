@@ -5,6 +5,8 @@ import NamesList from './NamesList/NamesList';
 import TitleBar from './TitleBar/Titlebar';
 import AlertUser from './AlertUser/AlertUser';
 import SuperheroTable from './SuperheroTable/SuperheroTable';
+import SuperheroForm from './SuperheroForm/SuperheroForm';
+import Joke from './Joke/Joke';
 
 class App extends Component {
     constructor(props){
@@ -13,6 +15,7 @@ class App extends Component {
             firstName: 'Reggie',
             lastName: 'White',
             names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly'],
+            superheroNumber: 0,
             superheroes: [
                 {
                     superheroId: 1,
@@ -39,6 +42,14 @@ class App extends Component {
     alertTheUser = (props) =>{
         alert('devCodeCamp')
     }
+
+    superCreate = (newSuper) =>{
+        console.log('from the create SuperheroForm component', newSuper);
+        this.state.superheroes.push(newSuper);
+        this.setState({
+            superheroNumber: this.state.superheroes.length - 1
+        })
+    }
    
 
     render() {
@@ -49,6 +60,9 @@ class App extends Component {
             <ol><NamesList nameList={this.state.names} /> </ol>
             <AlertUser alert={this.alertTheUser}/>
             <SuperheroTable superTable={this.state.superheroes}/>
+            <SuperheroForm superCreate={this.superCreate}/>
+            <Joke funny={this.Joke}/>
+            
 
 
         </div>
