@@ -65,9 +65,6 @@ class App extends Component {
             <SuperheroTable superTable={this.state.superheroes}/>
             <SuperheroForm superCreate={this.superCreate}/>
             
-            
-
-
         </div>
         )
     }

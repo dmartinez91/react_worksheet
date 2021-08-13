@@ -30,10 +30,7 @@ class Joke extends Component {
         return (
             <React.Fragment>
                 {console.log('state', this.state)}
-              
-    
-                {this.state.jokes.map(jokes => (
-                        
+                {this.state.jokes.map(jokes => (  
                     <h4 key={jokes.id}>
                         <h4> {jokes.setup} </h4>
                         <h4> {jokes.punchline} </h4>
