@@ -56,12 +56,15 @@ class App extends Component {
         return (
         <div className="container-fluid">
             <TitleBar />
-            <h1> <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/> </h1>
+            <h1> 
+                <DisplayName firstName={this.state.firstName} lastName={this.state.lastName}/> 
+                <Joke />
+            </h1>
             <ol><NamesList nameList={this.state.names} /> </ol>
             <AlertUser alert={this.alertTheUser}/>
             <SuperheroTable superTable={this.state.superheroes}/>
             <SuperheroForm superCreate={this.superCreate}/>
-            <Joke funny={this.Joke}/>
+            
             
 
 
